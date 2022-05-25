@@ -1,7 +1,6 @@
 import streamlit as st 
 import pandas as pd 
 import requests 
-import schedule
 import time 
 
 st.set_page_config (
