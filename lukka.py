@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd 
 import requests 
 import time 
+import datetime
 
 st.set_page_config (
     page_title="Lukka 30 Minutes",
@@ -412,6 +413,7 @@ if __name__ == '__main__':
 		# lukkaRun(query, variables)
 		lukkaAppend(query, variables, dfFees, dfIn, dfOut, dfStake, dfAddress, dfUnStake, i)
 		i -= 7 
+		st.success(datetime.datetime.now())
 		time.sleep(1800)
 
 	# schedule.every(30).minutes.do(lukkaRun(query, variables))
